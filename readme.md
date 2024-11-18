@@ -73,6 +73,10 @@ You can also run it with one line like this:
   - <exchanges list> = the exchanges you want the bot to scan the orderbooks on, among all the CCXT-compatible exchanges. From a 2 exchanges minimum, up to an unlimited number. Don't forget to configure the exchanges in exchange_config.py.
   
   * Examples:
-    @ Before this command you should enable renewal in the exchange_config.py
-  
-      python run.py real 15 1000 SOL/USDT binance,poloniex,kucoin   # run the bot with 1000 USDT on binance phemex and bybit on SOL/USDT, and rebalance every 15 minutes.
+    $ with renewal disabled ( For test ):
+      python run.py fake-money 500 EOS/USDT binance,okx,kucoin    # run the bot with 500 USDT and rebalance every 15 minutes, with binance okx and kucoin
+
+    $ with renewal enabled:
+      @ Before this command you should enable renewal in the exchange_config.py
+
+        python run.py real 15 1000 SOL/USDT binance,poloniex,kucoin   # run the bot with 1000 USDT on binance phemex and bybit on SOL/USDT, and rebalance every 15 minutes.
