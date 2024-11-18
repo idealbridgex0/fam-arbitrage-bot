@@ -1,9 +1,3 @@
-FFFF    AAAAA  M   M       AAAAA  RRRR   BBBB   III TTTTT RRRR    AAAAA  GGGG  EEEEE      BBBB   OOO  TTTTT
-F      A     A MM MM      A     A R   R  B   B   I    T   R   R  A     A G     E          B   B O   O   T  
-FFF    AAAAAAA M M M      AAAAAAA RRRR   BBBB    I    T   RRRR   AAAAAAA G  GG EEEE       BBBB  O   O   T  
-F      A     A M   M      A     A R  R   B   B   I    T   R  R   A     A G   G E          B   B O   O   T  
-F      A     A M   M      A     A R   R  BBBB   III   T   R   R  A     A  GGG  EEEEE      BBBB   OOO    T  
-
 
 ## Features
 -  Comaptible with all ccxt exchanges.
@@ -90,7 +84,7 @@ Parameters:
 
       ```
     - with renewal enabled:
-    
+
       @ Before this command you should enable renewal in the exchange_config.py
         ```
         python run.py real 15 1000 SOL/USDT binance,poloniex,kucoin   # run the bot with 1000 USDT on binance phemex and bybit on SOL/USDT, and rebalance every 15 minutes.
