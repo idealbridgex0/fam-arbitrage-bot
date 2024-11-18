@@ -43,6 +43,7 @@ F      A     A M   M      A     A R   R  BBBB   III   T   R   R  A     A  GGG  E
 2. Locate the ‘exchanges’ variable
 3. Add your API keys for the exchanges you want to trade on
 
+```
   exchanges = {
     'kucoin':{},
     'binance':{},
@@ -53,14 +54,16 @@ F      A     A M   M      A     A R   R  BBBB   III   T   R   R  A     A  GGG  E
     #     'secret':'here',
     # },
   }
-
+```
 
 ## Usage
 Run the bot with the following command:
-
+```
   "python run.py <mode> [renew-time-minutes] <balance-usdt-to-use> <pair> <exchanges list separated by commas (no space!)>"
+```
 
 Parameters:  
+  ```
   - "<mode>" = the mode you wanna use between fake-money and real. See #full-version for real mode.
 
     * fake-money: will run the bot with the balance-usdt-to-use you put, with a virtual balance, just to test.
@@ -74,14 +77,18 @@ Parameters:
     ex: COMAI/USDT, BTC/USDT, ETH/USDT
 
   - "<exchanges list>" = the exchanges you want the bot to scan the orderbooks on, among all the CCXT-compatible exchanges. From a 2 exchanges minimum, up to an unlimited number. Don't forget to configure the exchanges in exchange_config.py.
-  
-  * Examples:
+  ```
+
+* Examples:
 
     with renewal disabled ( For test ):
-
-      python run.py fake-money 500 EOS/USDT binance,okx,kucoin    # run the bot with 500 USDT and rebalance every 15 minutes, with binance okx and kucoin
-
+      ```
+        python run.py fake-money 500 EOS/USDT binance,okx,kucoin    # run the bot with 500 USDT and rebalance every 15 minutes, with binance okx and kucoin
+        
+      ```
     with renewal enabled:
       @ Before this command you should enable renewal in the exchange_config.py
-
+        ```
         python run.py real 15 1000 SOL/USDT binance,poloniex,kucoin   # run the bot with 1000 USDT on binance phemex and bybit on SOL/USDT, and rebalance every 15 minutes.
+        
+        ```
