@@ -16,9 +16,11 @@ F      A     A M   M      A     A R   R  BBBB   III   T   R   R  A     A  GGG  E
  - Install python 3.12
 
 ## Installation
+
+```
+
 1. Clone the repository
   
-  ```bash
   git clone https://github.com/idealbridgex0/fam-arbitrage-bot.git
 
 2. Go to the repository you just cloned
@@ -35,7 +37,7 @@ F      A     A M   M      A     A R   R  BBBB   III   T   R   R  A     A  GGG  E
 
   Python run.py
 
-  ```
+```
 
 ## How to add an exchange?
 
@@ -81,12 +83,14 @@ Parameters:
 
 * Examples:
 
-    with renewal disabled ( For test ):
+    - with renewal disabled ( For test ):
+
       ```
         python run.py fake-money 500 EOS/USDT binance,okx,kucoin    # run the bot with 500 USDT and rebalance every 15 minutes, with binance okx and kucoin
-        
+
       ```
-    with renewal enabled:
+    - with renewal enabled:
+    
       @ Before this command you should enable renewal in the exchange_config.py
         ```
         python run.py real 15 1000 SOL/USDT binance,poloniex,kucoin   # run the bot with 1000 USDT on binance phemex and bybit on SOL/USDT, and rebalance every 15 minutes.
