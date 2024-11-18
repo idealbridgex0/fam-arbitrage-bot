@@ -35,6 +35,7 @@ F      A     A M   M      A     A R   R  BBBB   III   T   R   R  A     A  GGG  E
 
   Python run.py
 
+  ```
 
 ## How to add an exchange?
 
@@ -77,7 +78,7 @@ Parameters:
   * Examples:
 
     with renewal disabled ( For test ):
-    
+
       python run.py fake-money 500 EOS/USDT binance,okx,kucoin    # run the bot with 500 USDT and rebalance every 15 minutes, with binance okx and kucoin
 
     with renewal enabled:
