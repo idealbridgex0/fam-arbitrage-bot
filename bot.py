@@ -159,6 +159,20 @@ s=0
 
 ordersFilled = 0
 
+try:
+    for n in echanges:
+        ticker = n.fetch_ticker(currentPair)
+        print(f"total volume of {currentPair} is {ticker['baseVolume']}")
+
+    if minimum_volume > ticker['baseVolume']:
+        print(f"{currentPair}'s volume is less than {minimum_volume} Breaking.")
+        append_new_line('logs/logs.txt',f"{get_time_blank()} INFO: {currentPair}'s volume is less than {minimum_volume}. Breaking.")
+        sys.exit(1)
+except Exception as e:
+    printerror(m=f"error while fetching base volume of {currentPair}. Error: {e}")
+    for exc in echanges_str:
+        ex[exc].close()
+
 while ordersFilled != len(echanges):
 
     for n in echanges_str:

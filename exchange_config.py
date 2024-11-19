@@ -16,11 +16,14 @@ exchanges = {
     'binance':{},
     'okx':{},
     'poloniex':{},
+    'mexc': {}
     # 'another_exchange_here':{
     #     'apiKey':'here',
     #     'secret':'here',
     # },
 }
+
+minimum_volume = 100000
 
 telegram_sending = False
 apiToken = 'here'
