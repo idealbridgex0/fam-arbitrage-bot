@@ -162,9 +162,9 @@ ordersFilled = 0
 try:
     for n in echanges:
         ticker = n.fetch_ticker(currentPair)
-        print(f"Total volume of {currentPair} is {ticker['baseVolume']}.")
+        print(f"Total volume of {currentPair} is {ticker['quoteVolume']}.")
 
-    if minimum_volume > ticker['baseVolume']:
+    if minimum_volume > ticker['quoteVolume']:
         print(f"{currentPair}'s volume is less than {minimum_volume} Breaking.")
         append_new_line('logs/logs.txt',f"{get_time_blank()} INFO: {currentPair}'s volume is less than {minimum_volume}. Breaking.")
         sys.exit(1)
